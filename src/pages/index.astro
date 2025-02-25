@@ -1,0 +1,238 @@
+---
+import './src/styles/global.css'
+import { PicanteModelCanvas } from '../components/3D-Model/PicanteModelCanvas.jsx';
+import Header from '../components/Header.astro';
+import Timeline from '../components/Timeline.astro';
+import Footer from '../components/Footer.astro';
+import Picantes from '../components/Picantes.jsx';
+import Sponsors from '../components/Sponsors.astro';
+import Ternas from '../components/Ternas.jsx';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content={Astro.generator} />
+	<title>Coscu Army Awards</title>
+	<script src="https://kit.fontawesome.com/1f814a61ce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<Header />
+	<main class="fixed min-h-[100vh] w-full flex justify-center top-0 z-10">
+		<!-- CONTAINER MAIN -->
+		<div class="flex px-5 items-center main-container">
+			<!-- LEFT BOX -->
+			<div class="flex flex-col gap-2">
+				<div class="flex flex-col gap-3">
+					<h1 class="text-5xl text-center font-bold">COSCU ARMY <span class="text-yellow-600 text-ani">AWARDS</span></h1>
+
+					<p class="text-lg max-w-[550px] left-text">Premiamos y homenajeamos a streamers de la comunidad de Twitch de Argentina.</p>
+
+					<a class="mx-auto" href="#about">KICK.COM/BRUNENGER</a>
+				</div>
+				<div class="pt-3 flex justify-center btn-left"> 
+					<a href="#about"
+					  type="submit"
+					  class="flex text-ani w-[125px] gap-2 duration-150 cursor-pointer items-center shadow-xl text-lg backdrop-blur-md lg:font-semibold isolation-auto border-yellow-500 text-yellow-500 relative z-10 px-3 py-2 overflow-hidden border-2 rounded-full group hover:bg-yellow-500 hover:text-white"
+					>
+					  Leer mas
+					  <svg
+						  viewBox="0 0 20 20"
+						  stroke="currentColor"
+						  fill="none"
+						  class="w-4 h-4 text-yellow-500 transition-transform duration-500 group-hover:rotate-90"
+						>
+						  <path
+							d="M5 12h14m-7-7l7 7-7 7"
+							stroke-width="2.5"
+							stroke-linejoin="round"
+							stroke-linecap="round"
+						  ></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<!-- PICANTITO -->
+			<div class="mt-10 picantito">
+				<PicanteModelCanvas 
+				client:load 
+				className="picante-container h-[480px]  p-0 cursor-pointer"
+			  /> 
+			</div>
+			<div class="pt-0  justify-center hidden btn-picante"> 
+				<a href="#about"
+				  type="submit"
+				  class="flex w-[125px] gap-2 duration-150 cursor-pointer items-center shadow-xl text-lg  backdrop-blur-md lg:font-bold isolation-auto border-yellow-500 text-yellow-500 relative z-10 px-3 py-2 overflow-hidden border-2 rounded-full group hover:bg-yellow-500 hover:text-white"
+				>
+				  Leer mas
+				  <svg
+					  viewBox="0 0 20 20"
+					  stroke="currentColor"
+					  fill="none"
+					  class="w-4 h-4 transition-transform duration-500 group-hover:rotate-90"
+					>
+					  <path
+						d="M5 12h14m-7-7l7 7-7 7"
+						stroke-width="2.5"
+						stroke-linejoin="round"
+						stroke-linecap="round"
+					  ></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</main>
+	  
+		
+
+	<!-- ABOUT -->
+	 <section id="about" class="flex pt-7 relative items-center min-h-[100vh] w-full mt-[100vh] bg-white z-20">
+		<div class="about-container flex justify-center items-center w-full gap-6">
+			<div class="px-8">
+				<Timeline />
+			</div>
+			<div>
+				<div class="text-center p-6">
+					<h1 class="text-5xl font-bold text-yellow-500 text-ani">2023</h1>
+					<div class="mt-4">
+					  <p class="text-2xl font-bold">PICO DE ESPECTADORES</p>
+					  <p class="text-2xl">125,473</p>
+					</div>
+					<div class="mt-4">
+					  <p class="text-2xl font-bold">DURACIÓN</p>
+					  <p class="text-2xl">5h 45m</p>
+					</div>
+					<div class="mt-4">
+					  <p class="text-2xl font-bold">CATEGORÍAS</p>
+					  <p class="text-2xl">52</p>
+					</div>
+				  </div>
+				  
+			</div>
+		</div>
+	 </section>
+
+
+	 <!-- PICANTES -->
+	  <section id="picantes" class="min-h-[65vh] relative z-30 bg-white items-center flex">
+		<div class="w-full">
+			<div class="flex justify-center">
+				<Picantes client:load/>
+			</div>
+		</div>
+	  </section>
+
+	  <!-- TERNAS -->
+	   <section id="ternas" class="m-h-[100vh] bg-white relative z-40 p-5">
+			<div>
+				<header class="flex flex-col items-center gap-3 p-5">
+					<h2 class="text-6xl font-bold text-ani">TERNAS</h2>
+					<p class="text-lg w-[95%] py-3">Las <span class="text-ani">ternas</span> son grupos de tres nominados que compiten por un premio en una categoría. Representan a los finalistas más destacados, entre los cuales se elige al ganador.</p>
+				</header>
+				<div>
+					<Ternas />
+				</div>
+			</div>
+	   </section>
+
+	  <!-- SPONSORS -->
+	   <section id="sponsors" class="min-h-[65vh] p-10 relative z-40 bg-white">
+			<div class="flex flex-col gap-6">
+				<header class="flex flex-col items-center gap-3">
+					<h2 class="text-6xl font-bold text-ani">SPONSORS</h2>
+					<p class="text-xl">Gracias a nuestros sponsors y a todos nuestros seguidores, podemos hacer de esto, una realidad.</p>
+				</header>
+				<div>
+					<Sponsors />
+				</div>
+			</div>
+			
+	   </section>
+	   <section class="relative z-40">
+		
+		<div class="flex flex-col items-end">
+			<div class="flex justify-center w-full">
+			  <Footer />
+			</div>
+		</div>
+	   </section>
+	   
+</body>
+<style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
+
+	main{
+		background-image: ;
+	}
+	.text-ani {
+    background: linear-gradient(to right, rgb(255, 238, 89) 0%, #a87b00 50%, rgb(255, 228, 108) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: waveTitle 6s infinite linear;
+}
+section, main{
+	background-color: #212121;
+	color: white;
+}
+
+@keyframes waveTitle {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+
+/* MEDIA QUERYS */
+@media (max-width:650px){
+	.main-container{
+		flex-direction: column;
+		margin-top: 20%;
+	}
+	.picante-container{
+		height: 300px;
+		margin: 0;
+	}
+	.picantito{
+		margin: 60px 0;
+		transform: scale(1.3);
+	}
+	#about{
+		margin-top: 110vh;
+	}
+	.about-container{
+		padding: 15px;
+		flex-direction: column;
+	}
+	.about-container h2{
+		text-align: center;
+	}
+	.item{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.item p{
+		display: flex;
+		justify-content: center;
+	}
+	.btn-left{
+		display: none;
+	}
+	.btn-picante{
+		display: block;
+	}
+	.left-text{
+		display: none;
+	}
+}
+</style>
+<script src="../script.js"></script>
+</html>

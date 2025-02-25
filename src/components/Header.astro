@@ -1,0 +1,82 @@
+---
+import LogoCaawards from "../icons/LogoAwards.astro";
+---
+
+<header data-aos="fade-down" id="header" class="flex fixed w-full top-0 z-11 justify-between py-1 px-10 items-center duration-200">
+	<div>
+		<LogoCaawards transition:persist alt="logo-caawards" class:list={"w-[80px] h-auto"} />
+	</div>
+	<nav class="desk-nav">
+		<ul class="flex gap-8 text-lg">
+			<a href="#about">Nosotros</a>
+			<a href="#picantes">Picantes</a>
+			<a href="#ternas">Ternas</a>
+			<a href="#sponsors">Sponsors 2024</a>
+		</ul>
+	</nav>
+	<div class="hidden btn-nav">
+		<button onclick="openNav()" class="cursor-pointer flex">
+			<label>
+				<div
+				  class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
+				>
+				  <input class="hidden" type="checkbox" />
+				  <div
+					class="w-[50%] h-[2px] bg-white rounded-sm translate-y-[0.45rem]"
+				  ></div>
+				  <div
+					class="w-[50%] h-[2px] bg-white rounded-md"
+				  ></div>
+				  <div
+					class="w-[50%] h-[2px] bg-white rounded-md -translate-y-[0.45rem]"
+				  ></div>
+				</div>
+			  </label>
+		</button>
+	</div>
+</header>
+<div id="navMobile" class="nav-mobile fixed top-0 left-0 w-full h-full bg-[#212121] z-50 hidden">
+	<header class="flex justify-between items-center py-1 px-10">
+		<div>
+			<LogoCaawards transition:persist alt="logo-caawards" class:list={"w-[80px] h-auto"} />
+		</div>
+		<span class="">
+			<button onclick="closeNav()" class="cursor-pointer">
+				<label>
+					<div
+					  class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
+					>
+					  <input class="hidden" type="checkbox" />
+					  <div
+						class="w-[50%] h-[2px] bg-white rounded-md rotate-[320deg]"
+					  ></div>
+					  <div
+						class="w-[50%] h-[2px] bg-white rounded-md -translate-y-[2px] rotate-[40deg]"
+					  ></div>
+					</div>
+				  </label>
+			</button>
+		</span>
+	</header>
+	<nav class="flex justify-center items-center h-full pb-50">
+		<ul class="flex flex-col items-center gap-8 text-lg">
+			<a href="#about">Nosotros</a>
+			<a href="#picantes">Picantes</a>
+			<a href="#ternas">Ternas</a>
+			<a href="#sponsors">Sponsors 2024</a>
+		</ul>
+	</nav>
+</div>
+<style>
+	@media (max-width: 650px) {
+		.desk-nav{
+			display: none;
+		}
+		.btn-nav{
+			display: block;
+		}
+	}
+	*{
+		color: white;
+	}
+</style>
