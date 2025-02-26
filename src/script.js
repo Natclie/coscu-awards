@@ -1,3 +1,8 @@
+import AOS from 'aos';
+    AOS.init({
+        duration: 500,
+    });
+
 // Mobile navigation
 const navMobile = document.getElementById("navMobile");
 
@@ -17,3 +22,4 @@ function closeNav() {
 
 window.openNav = openNav;
 window.closeNav = closeNav;
+

@@ -1,0 +1,29 @@
+<div id="alert" data-aos="fade-down" data-aos-delay="200" class="fixed top-20 z-20 text-white flex justify-center items-center w-full">
+    <div class="w-auto h-auto flex justify-center gap-5 bg-[#151515] p-3 rounded-2xl">
+        <div class="flex mx-auto">
+            <h2 class="mx-auto">Este sitio web fue creado por fines de practica y educación, visita el sitio web oficial <a class="text-ani font-bold" target="_blank" href="https://caawards.com.ar/">aquí</a>.</h2>
+        </div>
+        <button onclick="closeAlert()">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+            >
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+            ></path>
+        </svg>
+        </button>
+    </div>
+</div>
+<script client:load>
+    // Close alert
+function closeAlert() {
+    document.getElementById("alert").style.display = "none";
+}
+</script>

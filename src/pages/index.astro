@@ -7,6 +7,8 @@ import Footer from '../components/Footer.astro';
 import Picantes from '../components/Picantes.jsx';
 import Sponsors from '../components/Sponsors.astro';
 import Ternas from '../components/Ternas.jsx';
+import Alert from '../components/Alert.astro';
+import 'aos/dist/aos.css';
 ---
 
 <!DOCTYPE html>
@@ -15,16 +17,18 @@ import Ternas from '../components/Ternas.jsx';
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="generator" content={Astro.generator} />
+	<link rel="coscu icon" href="../public/favicon.ico"/>
 	<title>Coscu Army Awards</title>
 	<script src="https://kit.fontawesome.com/1f814a61ce.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<Header />
-	<main class="fixed min-h-[100vh] w-full flex justify-center top-0 z-10">
+	<Alert />
+	<main data-aos="fade-in" class="fixed min-h-[100vh] w-full flex justify-center top-0 z-10">
+		<Header />
 		<!-- CONTAINER MAIN -->
 		<div class="flex px-5 items-center main-container">
 			<!-- LEFT BOX -->
-			<div class="flex flex-col gap-2">
+			<div data-aos="fade-in" data-aos-delay="400" class="flex flex-col gap-2">
 				<div class="flex flex-col gap-3">
 					<h1 class="text-5xl text-center font-bold">COSCU ARMY <span class="text-yellow-600 text-ani">AWARDS</span></h1>
 
@@ -55,7 +59,7 @@ import Ternas from '../components/Ternas.jsx';
 				</div>
 			</div>
 			<!-- PICANTITO -->
-			<div class="mt-10 picantito">
+			<div data-aos="fade-left" data-aos-delay="700" class="mt-10 picantito">
 				<PicanteModelCanvas 
 				client:load 
 				className="picante-container h-[480px]  p-0 cursor-pointer"
@@ -93,7 +97,7 @@ import Ternas from '../components/Ternas.jsx';
 			<div class="px-8">
 				<Timeline />
 			</div>
-			<div>
+			<div data-aos="fade-up">
 				<div class="text-center p-6">
 					<h1 class="text-5xl font-bold text-yellow-500 text-ani">2023</h1>
 					<div class="mt-4">
@@ -141,8 +145,8 @@ import Ternas from '../components/Ternas.jsx';
 	   <section id="sponsors" class="min-h-[65vh] p-10 relative z-40 bg-white">
 			<div class="flex flex-col gap-6">
 				<header class="flex flex-col items-center gap-3">
-					<h2 class="text-6xl font-bold text-ani">SPONSORS</h2>
-					<p class="text-xl">Gracias a nuestros sponsors y a todos nuestros seguidores, podemos hacer de esto, una realidad.</p>
+					<h2 data-aos="fade-up" class="text-6xl font-bold text-ani">SPONSORS</h2>
+					<p data-aos="fade-up" class="text-xl">Gracias a nuestros sponsors y a todos nuestros seguidores, podemos hacer de esto, una realidad.</p>
 				</header>
 				<div>
 					<Sponsors />
@@ -164,7 +168,6 @@ import Ternas from '../components/Ternas.jsx';
 	html{
 		scroll-behavior: smooth;
 	}
-
 	main{
 		background-image: ;
 	}

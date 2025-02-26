@@ -55,8 +55,8 @@ export default function StreamersSection() {
   return (
     <section className="p-6 flex justify-center">
       <div>
-      <h2 className="text-4xl font-bold mb-4 text-ani text-center flex justify-center">SELECCIONA UNA CATEGORÍA</h2>
-      <select
+      <h2 data-aos="fade-up" className="text-4xl font-bold mb-4 text-ani text-center flex justify-center">SELECCIONA UNA CATEGORÍA</h2>
+      <select  data-aos="fade-up"
         value={selectedCategory}
         onChange={handleChange}
         className="flex mx-auto outline-0"
@@ -70,7 +70,7 @@ export default function StreamersSection() {
       <div>
         <ul className="flex flex-wrap justify-center">
           {winners.map((ganador, index) => (
-            <li
+            <li  data-aos="fade-up"
               key={index}
               className="flex flex-col p-5 text-center"
             >
