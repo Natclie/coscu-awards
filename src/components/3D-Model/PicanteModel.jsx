@@ -12,5 +12,5 @@ export function PicanteModel() {
         }
     });
 
-    return <primitive object={scene} ref={group} scale={[2.3, 2.3, 2.3]} position={[0, -5.3, 0]} />;
+    return <primitive object={scene} ref={group} scale={[2.3, 2.3, 2.3]} position={[0, -6.3, 0]} />;
 }
