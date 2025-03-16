@@ -59,7 +59,7 @@ export default function StreamersSection() {
       <select  data-aos="fade-up"
         value={selectedCategory}
         onChange={handleChange}
-        className="flex mx-auto outline-0"
+        className="flex mx-auto outline-0 bg-[#212121]"
       >
         {Object.keys(categorias).map((categoria) => (
           <option key={categoria} value={categoria} className="text-white">

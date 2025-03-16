@@ -2,7 +2,7 @@
 import '/src/styles/global.css'
 import { PicanteModelCanvas } from '../components/3D-Model/PicanteModelCanvas.jsx';
 import Header from '../components/Header.astro';
-import Timeline from '../components/Timeline.astro';
+import Timeline from '../components/Timeline.jsx';
 import Footer from '../components/Footer.astro';
 import Picantes from '../components/Picantes.jsx';
 import Sponsors from '../components/Sponsors.astro';
@@ -38,10 +38,10 @@ import 'aos/dist/aos.css';
 	
 						<a class="mx-auto" href="#about">KICK.COM/BRUNENGER</a>
 					</div>
-					<div class="pt-3 flex justify-center btn-left"> 
+					<div class="pt-1 flex justify-center btn-left"> 
 						<a href="#about"
 						  type="submit"
-						  class="flex text-ani w-auto gap-2 duration-150 cursor-pointer items-center shadow-xl text-lg backdrop-blur-md lg:font-semibold isolation-auto border-yellow-500 text-yellow-500 relative z-10 px-3 py-2 overflow-hidden border-2 rounded-full group hover:bg-yellow-500 hover:text-white"
+						  class="flex text-ani w-auto gap-2 duration-150 cursor-pointer items-center shadow-xl text-lg  isolation-auto border-yellow-500 text-yellow-500 relative z-10 px-3 py-1 overflow-hidden border-1 rounded-full group hover:bg-yellow-500 hover:text-white"
 						>
 						  Leer mas
 						  <svg
@@ -70,7 +70,7 @@ import 'aos/dist/aos.css';
 				<div class="pt-0  justify-center hidden btn-picante"> 
 					<a href="#about"
 					  type="submit"
-					  class="flex w-auto gap-1 duration-150 cursor-pointer items-center shadow-xl text-lg  backdrop-blur-md lg:font-bold isolation-auto border-yellow-500 text-yellow-500 relative z-10 px-3 py-2 overflow-hidden border-2 rounded-full group hover:bg-yellow-500 hover:text-white"
+					  class="flex w-auto gap-1 duration-150 cursor-pointer items-center shadow-xl text-lg lg:font-bold isolation-auto border-yellow-500 text-yellow-500 relative z-10 px-3 py-2 overflow-hidden border-2 rounded-full group hover:bg-yellow-500 hover:text-white"
 					>
 					  Leer mas
 					  <svg
@@ -89,7 +89,7 @@ import 'aos/dist/aos.css';
 					</a>
 				</div>
 			</div>
-			<div class="pt-10">
+			<div class="pt-6">
 				<Media />
 			</div>
 		</div>
@@ -104,7 +104,7 @@ import 'aos/dist/aos.css';
 				<Timeline />
 			</div>
 			<div data-aos="fade-up">
-				<div class="text-center p-6">
+				<div class="text-center p-6 ">
 					<h1 class="text-5xl font-bold text-yellow-500 text-ani">2023</h1>
 					<div class="mt-4">
 					  <p class="text-2xl font-bold">PICO DE ESPECTADORES</p>
@@ -185,7 +185,10 @@ import 'aos/dist/aos.css';
     animation: waveTitle 6s infinite linear;
 }
 section, main{
-	background-color: #212121;
+	background-image: url(/public/bg.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	color: white;
 }
 
@@ -238,9 +241,6 @@ section, main{
 	.btn-picante{
 		display: flex;
 		justify-content: center;
-	}
-	.left-text{
-		display: none;
 	}
 }
 </style>
